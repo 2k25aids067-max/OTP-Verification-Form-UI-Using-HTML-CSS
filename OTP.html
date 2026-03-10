@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zoro🔥</title>
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/736x/30/42/ff/3042ff9ef0e18db8580313c8a61d45ca.jpg"
+      type="icon/png"
+    />
+  </head>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      font-family: sans-serif;
+       }
+    body{
+        background-color:#111111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .otpform{
+        width: 290px;
+        display: flex;
+        background-color: snow;
+        flex-direction: column;
+        padding: 45px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 3px black;
+        position: relative;
+    }
+    .otp-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .otp{
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        font-size: 18px;
+        background-color: #e4e4e4;
+        transition: .5s ease-in;
+        outline: none;
+    }
+    .otp:focus{
+        background:linear-gradient(to bottom left,
+          #F2F3F4,
+      #FEFEFA,
+      #F8F4FF,
+      #C0C0C0,
+      #8C92AC);
+      background-size: 200%;
+      animation: spin 2.5s linear infinite;
+    }
+    @keyframes spin{
+        to{
+            background-position: 200%;
+        }
+    }
+    #verification{
+        cursor: pointer;
+        width: 100%;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 15px;
+        background-color: #1877f2;
+        color: white;
+        transition: .3s ease-in;
+        font-size: 16px;
+    }
+    #verification:hover{
+      /*
+        background: linear-gradient(to bottom right,
+          #ff8200,
+        #ed1b24,
+        #ffbf00,
+        #ff4f00,
+        #ff4f00,
+        #ff4f00);
+        background-size: 200%;
+        animation: anime 3s linear infinite;*/
+        background-color:#4169E1;
+    }
+    /*@keyframes anime{
+        to{
+            background-position: 200%;
+        }
+    }*/
+    #resend{
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: #1877f2;
+        font-weight: bold;
+        font-size: 16px;
+       margin: 5px;
+    }
+    #exit{
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background-color: white;
+        font-size: 15px;
+        padding: 5px 8px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 3px black;
+    }
+  </style>
+  <body>
+    <form class="otpform">
+      <h1>Enter OTP</h1>
+      <p>We have send a verification code.Check  your Email</p>
+
+      <div class="otp-container">
+        <input type="text" class="otp" id="otp1" maxlength="1" required />
+        <input type="text" class="otp" id="otp2" maxlength="1" required />
+        <input type="text" class="otp" id="otp3" maxlength="1" required />
+        <input type="text" class="otp" id="otp4" maxlength="1" required />
+      </div>
+
+      <button id="verification" class="submit">Verify</button>
+      <p>Didn't recevied the code</p>
+      <button id="resend" type="button">Resend Code</button>
+      <button type="button" id="exit">&#10006</button>
+    </form>
+  </body>
+</html>
